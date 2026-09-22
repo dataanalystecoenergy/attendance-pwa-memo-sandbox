@@ -27,8 +27,6 @@
         ⚠️ SANDBOX — Memo feature preview only. Submitting attendance here writes to the REAL production sheet — do not submit real attendance from this page.
     </div>
 
-    <button type="button" id="memoBtn" class="memo-top-btn">📅 Memo</button>
-
     <div class="logo-container">
         <img src="eco-logo-transparent.png" alt="EcoEnergy Solar Logo">
     </div>
@@ -121,7 +119,10 @@
         <form id="attendanceForm">
             <!-- Only shown while login is switched off (REQUIRE_LOGIN = false in app.js) -->
             <div id="submitterEmailGroup" style="display:none;">
-                <div class="section-label"><span class="section-icon">🔑</span>Your Info</div>
+                <div class="section-label section-label-with-action">
+                    <span><span class="section-icon">🔑</span>Your Info</span>
+                    <button type="button" id="memoBtn" class="memo-inline-btn">📅 Memo</button>
+                </div>
                 <div class="form-group">
                     <label for="submitterEmail">Email Address <span class="required">*</span></label>
                     <input type="email" id="submitterEmail" name="submitterEmail">

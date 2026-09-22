@@ -195,25 +195,33 @@ button, input, textarea, select {
     font-size: 1rem;
 }
 
-/* ================= MEMO (top button) / REFRESH (floating) ================= */
+/* ================= MEMO (inline next to "Your Info") / REFRESH (floating) ================= */
 
-.memo-top-btn {
-    display: block;
-    margin: 12px auto 0;
+.section-label-with-action {
+    justify-content: space-between;
+}
+
+.memo-inline-btn {
     background: linear-gradient(135deg, var(--gold), var(--gold-dark));
     color: white;
     border: none;
-    padding: 14px 30px;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 0.78rem;
     font-weight: 700;
+    text-transform: none;
+    letter-spacing: normal;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(232,134,11,0.35);
-    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+    box-shadow: 0 3px 8px rgba(232,134,11,0.35);
+    transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-.memo-top-btn:hover {
+.memo-inline-btn:hover {
     filter: brightness(1.05);
+}
+
+.memo-inline-btn:active {
+    transform: scale(0.97);
 }
 
 .memo-top-btn:active {
