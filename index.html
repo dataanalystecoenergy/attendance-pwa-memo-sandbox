@@ -34,6 +34,7 @@
     <button type="button" id="installBtn" class="install-btn" style="display:none;">📲 Install App</button>
 
     <button type="button" id="refreshBtn" class="refresh-fab" title="Refresh" aria-label="Refresh">🔄</button>
+    <button type="button" id="memoBtn" class="memo-fab" title="Memo" aria-label="Memo"><span class="memo-fab-icon">📅</span><span class="memo-fab-label">Memo</span></button>
 
     <!-- ================= MEMO CALENDAR ================= -->
     <div id="memoOverlay" class="install-overlay memo-overlay" style="display:none;">
@@ -119,10 +120,7 @@
         <form id="attendanceForm">
             <!-- Only shown while login is switched off (REQUIRE_LOGIN = false in app.js) -->
             <div id="submitterEmailGroup" style="display:none;">
-                <div class="section-label section-label-with-action">
-                    <span><span class="section-icon">🔑</span>Your Info</span>
-                    <button type="button" id="memoBtn" class="memo-inline-btn">📅 Memo</button>
-                </div>
+                <div class="section-label"><span class="section-icon">🔑</span>Your Info</div>
                 <div class="form-group">
                     <label for="submitterEmail">Email Address <span class="required">*</span></label>
                     <input type="email" id="submitterEmail" name="submitterEmail">
