@@ -195,60 +195,57 @@ button, input, textarea, select {
     font-size: 1rem;
 }
 
-/* ================= FLOATING ACTION BUTTONS (Refresh / Memo) =================
-   A matched pair, pinned to opposite bottom corners so they're always
-   reachable without disturbing the form layout - Refresh (bottom-left,
-   icon-only) mirrors Memo (bottom-right, icon + label). */
+/* ================= MEMO (top button) / REFRESH (floating) ================= */
 
-.refresh-fab,
-.memo-fab {
-    position: fixed;
-    bottom: 18px;
-    height: 52px;
-    border: none;
-    border-radius: 16px;
+.memo-top-btn {
+    display: block;
+    margin: 12px auto 0;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
     color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(232,134,11,0.35);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.memo-top-btn:hover {
+    filter: brightness(1.05);
+}
+
+.memo-top-btn:active {
+    transform: scale(0.99);
+}
+
+.refresh-fab {
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    border: none;
+    background: #4285f4;
+    color: white;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     z-index: 500;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-.refresh-fab:hover,
-.memo-fab:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.4);
-}
-
-.refresh-fab {
-    left: 18px;
-    width: 52px;
-    background: #4285f4;
-    font-size: 1.3rem;
+.refresh-fab:hover {
+    transform: scale(1.08);
 }
 
 .refresh-fab:active {
     transform: scale(0.94) rotate(-25deg);
-}
-
-.memo-fab {
-    right: 18px;
-    gap: 8px;
-    padding: 0 18px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    font-size: 0.95rem;
-    font-weight: 700;
-}
-
-.memo-fab:active {
-    transform: scale(0.96);
-}
-
-.memo-fab-icon {
-    font-size: 1.15rem;
 }
 
 /* ================= MEMO CALENDAR ================= */
