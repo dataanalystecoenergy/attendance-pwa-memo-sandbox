@@ -195,39 +195,52 @@ button, input, textarea, select {
     font-size: 1rem;
 }
 
-/* ================= MINI TOP BAR (Refresh / Memo) ================= */
+/* ================= MEMO (top button) / REFRESH (floating) ================= */
 
-.mini-topbar {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto 6px;
-    padding: 10px 6px 0;
+.memo-top-btn {
+    display: block;
+    margin: 12px auto 0;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #3a2600;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.mini-topbar-btn {
-    width: 42px;
-    height: 42px;
+.memo-top-btn:hover {
+    filter: brightness(1.05);
+}
+
+.refresh-fab {
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.5);
-    background: rgba(255,255,255,0.12);
+    border: none;
+    background: var(--navy);
     color: white;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    z-index: 500;
+    transition: transform 0.2s ease;
 }
 
-.mini-topbar-btn:hover {
-    background: rgba(255,255,255,0.25);
-    transform: scale(1.05);
+.refresh-fab:hover {
+    transform: scale(1.08);
 }
 
-.mini-topbar-btn:active {
-    transform: scale(0.96);
+.refresh-fab:active {
+    transform: scale(0.94) rotate(-25deg);
 }
 
 /* ================= MEMO CALENDAR ================= */
