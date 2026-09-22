@@ -201,18 +201,23 @@ button, input, textarea, select {
     display: block;
     margin: 12px auto 0;
     background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    color: #3a2600;
+    color: white;
     border: none;
-    padding: 10px 24px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 14px rgba(232,134,11,0.35);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
 }
 
 .memo-top-btn:hover {
     filter: brightness(1.05);
+}
+
+.memo-top-btn:active {
+    transform: scale(0.99);
 }
 
 .refresh-fab {
@@ -221,9 +226,9 @@ button, input, textarea, select {
     bottom: 18px;
     width: 52px;
     height: 52px;
-    border-radius: 50%;
+    border-radius: 16px;
     border: none;
-    background: var(--navy);
+    background: #4285f4;
     color: white;
     font-size: 1.3rem;
     display: flex;
